@@ -6,10 +6,12 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
+import android.view.View.OnClickListener;
 
 import java.util.ArrayList;
 
@@ -20,7 +22,6 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
     private Button btn_Search;
     private AutoCompleteTextView actv_Search;
     ArrayList<ApkEntity> apk_list;
-
 
     //定义一个数组
     private String[] res={"chengdu1","chengdu nihao1",
@@ -37,7 +38,6 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
 
         setData();
         showList(apk_list);
-
 
         //搜索框的匹配
        ArrayAdapter<String> adapter1=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_dropdown_item,res);
@@ -59,8 +59,8 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
             }
         });
         return hotlayout;
-
     }
+
 
     MyAdapter adapter;
     ReFlashListView listView;
@@ -68,7 +68,8 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
         if (adapter==null){
             listView=(ReFlashListView)hotlayout.findViewById(R.id.listView);
             listView.setInterface(this);
-            adapter=new MyAdapter(hotlayout.getContext(),apk_list);
+            adapter=new MyAdapter(hotlayout.getContext(),apk_list,null);
+
             listView.setAdapter(adapter);
         }else {
             adapter.onDateChange(apk_list);
@@ -76,7 +77,7 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
     }
     private void setData(){
         apk_list=new ArrayList<ApkEntity>();
-        for (int i=0;i<5;i++){
+        for (int i=0;i<3;i++){
             ApkEntity entity=new ApkEntity();
             entity.setName("默认图片");
             apk_list.add(entity);
@@ -105,4 +106,6 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
             }
         },2000);
     }
+
+
 }

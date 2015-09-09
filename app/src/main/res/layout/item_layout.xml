@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center_vertical"
         android:background="@drawable/app_item_bg"
@@ -14,19 +14,21 @@
         <ImageView
             android:id="@+id/item3_apkiv"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/itemimg"
+            android:layout_height="fill_parent"
              />
-        </LinearLayout>
 
-    <TextView
-        android:id="@+id/item3_apkname"
-        android:layout_width="fill_parent"
-        android:layout_height="30dip"
-        android:layout_marginLeft="5dip"
-        android:layout_marginRight="5dip"
-        android:gravity="center_vertical"
-        android:text="应用程序描述"
-        android:textSize="14dip" />
+        <TextView
+            android:id="@+id/item3_apkname"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:gravity="center_vertical"
+            android:text="应用程序描述"
+            android:textSize="14dip"
+            android:visibility="visible"/>
 
-</LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

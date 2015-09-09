@@ -9,6 +9,6 @@ public class RegActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_layout);
+        setContentView(R.layout.reg_layout);
     }
 }
