@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout><!--主要内容窗口-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tab_background" >
+
+        <RelativeLayout
+            android:id="@+id/hot_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+
+                <TextView
+                    android:id="@+id/hot_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/btnHot"
+                    android:textColor="#82858b" />
+
+
+        </RelativeLayout><!--热门按钮-->
+
+        <RelativeLayout
+            android:id="@+id/guide_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/guide_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:textSize="18dp"
+                    android:text="@string/btnGuide"
+                    android:textColor="#82858b" />
+
+
+        </RelativeLayout><!--导游按钮-->
+
+        <RelativeLayout
+            android:id="@+id/user_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/user_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:text="@string/btnUser"
+                    android:textSize="18dp"
+                    android:textColor="#82858b" />
+
+
+        </RelativeLayout><!--用户按钮-->
+
+    </LinearLayout><!--底部标签栏-->
+
+</LinearLayout>

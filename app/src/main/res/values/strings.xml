@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TourGuide</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnHot">热门</string>
+    <string name="btnGuide">导游</string>
+    <string name="btnUser">我</string>
+    <string name="title_activity_hot">HotActivity</string>
+    <string name="title_activity_site_intro">SiteIntroActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+
+    <string name="lguid">用户名</string>
+    <string name="lgpwd">密码</string>
+    <string name="lgbtn">登录</string>
+
+    <string name="reguid">请输入用户名</string>
+    <string name="regpwd">请输入密码</string>
+    <string name="regconfirmpwd">请确认密码</string>
+    <string name="regbtn">注册</string>
+
+    <string name="regpage">还没有账号？点击此处立即注册</string>
+
+    <string name="version">当前版本：v1.0</string>
+    <string name="title_activity_reg">RegActivity</string>
+
+</resources>

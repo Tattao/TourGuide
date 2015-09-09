@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tourguide.UserActivity">
+    <!--从这以后的东西随便改，除了最后的结束标签-->
+    <ImageView
+        android:id="@+id/welcomepic"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/brand"
+        android:layout_width="233dp"
+        android:layout_height="161dp"
+        android:layout_marginBottom="40dp"
+        />
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:layout_below="@+id/welcomepic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/loginboxbg"
+        android:id="@+id/loginbox">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+                <EditText
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/edittextstylefirst"
+                    android:id="@+id/edtTxtUserName"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:hint="@string/lguid"
+                    android:textColorHint="@color/lightgray"
+                    android:layout_gravity="center_horizontal" />
+                <EditText
+                    android:background="@drawable/edittextstylelast"
+                    android:id="@+id/edtTxtPassword"
+                    android:inputType="textPassword"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:hint="@string/lgpwd"
+                    android:textColorHint="@color/lightgray"
+                    android:layout_gravity="center_horizontal" />
+            <Button
+                android:layout_marginTop="10dp"
+                android:text="@string/lgbtn"
+                android:layout_width="210dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/regpage"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:text="@string/regpage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginbox"
+        android:text="@string/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
