@@ -1,33 +1,70 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     tools:context="com.example.tourguide.HotActivity">
-    <!--从这以后的东西随便改，除了最后的结束标签-->
     <LinearLayout
+        android:id="@+id/ll_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical" >
+        android:layout_height="50dp"
+        android:background="@drawable/tab_bg" >
 
-
-        <ImageView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/message_selected" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="这是热门界面"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="55dp"
+                android:layout_height="40dp"
+                android:text="@string/btnSearch"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_searchstyle"
+                android:layout_centerVertical="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="60dp"
+
+                >
+
+                <AutoCompleteTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/actv_Search"
+                    android:singleLine="true"
+                    android:paddingLeft="38dp"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/search_frame"
+                    android:hint=""
+
+                    >
+                </AutoCompleteTextView>
+                <ListView
+                    android:id="@+id/lv_SearchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
-
-
+    <com.example.tourguide.ReFlashListView
+        android:layout_marginTop="50dp"
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/white"
+        android:dividerHeight="5dp"
+        android:cacheColorHint="@color/white"
+        />
 </RelativeLayout>

@@ -6,6 +6,7 @@
     <string name="btnHot">热门</string>
     <string name="btnGuide">导游</string>
     <string name="btnUser">我</string>
+    <string name="btnSearch">搜索</string>
     <string name="title_activity_hot">HotActivity</string>
     <string name="title_activity_site_intro">SiteIntroActivity</string>
     <string name="title_activity_guide">GuideActivity</string>
