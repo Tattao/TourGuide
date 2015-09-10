@@ -43,7 +43,6 @@
                     android:paddingRight="20dp"
                     android:background="@drawable/search_frame"
                     android:hint=""
-
                     >
                 </AutoCompleteTextView>
                 <ListView
@@ -63,8 +62,6 @@
         android:id="@+id/listView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/white"
-        android:dividerHeight="5dp"
         android:cacheColorHint="@color/white"
         />
 </RelativeLayout>

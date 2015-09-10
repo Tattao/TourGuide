@@ -23,14 +23,12 @@ import javax.security.auth.callback.Callback;
 /**
  * Created by Tattao on 2015/9/8.
  */
-public class MyAdapter extends BaseAdapter implements View.OnClickListener {
+public class MyAdapter extends BaseAdapter  {
 
     ArrayList<ApkEntity> apk_list;
     LayoutInflater inflater;
     private ImageView mImageView;
     private ImageCacheManager imageCacheManager;
-    private static final String TAG="ContentAdapter";
-    private Callback mCallback;
 
     /**
      * 自定义接口，用于回调按钮点击事件到Activity*/
@@ -38,10 +36,9 @@ public class MyAdapter extends BaseAdapter implements View.OnClickListener {
         public void click(View v);
     }
 
-    public MyAdapter(Context context, ArrayList<ApkEntity> apk_list, Callback callback){
+    public MyAdapter(Context context, ArrayList<ApkEntity> apk_list){
         this.apk_list=apk_list;
         this.inflater=LayoutInflater.from(context);
-        mCallback=callback;
     }
     public void onDateChange(ArrayList<ApkEntity> apk_list){
         this.apk_list=apk_list;
@@ -62,7 +59,6 @@ public class MyAdapter extends BaseAdapter implements View.OnClickListener {
     public long getItemId(int position) {
         return position;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -93,10 +89,7 @@ public class MyAdapter extends BaseAdapter implements View.OnClickListener {
         return convertView;
     }
 
-    @Override
-    public void onClick(View v) {
-        mCallback.click(v);
-    }
+
 
     private class DownloadTask extends AsyncTask<String,Void,Bitmap>{
         @Override

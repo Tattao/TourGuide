@@ -49,6 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         hotLayout.setOnClickListener(this);
         guideLayout.setOnClickListener(this);
         userLayout.setOnClickListener(this);
+
     }
 
     @Override

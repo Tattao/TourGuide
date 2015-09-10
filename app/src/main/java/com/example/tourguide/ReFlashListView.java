@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.RotateAnimation;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -52,6 +53,11 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
         initView(context);
     }
 
+    @Override
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        super.setOnItemClickListener(listener);
+    }
+
     /**
      * 初始化界面，添加顶部布局文件到 listview
      *
@@ -90,7 +96,6 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
         }
         view.measure(width, height);
     }
-
     /**
      * 设置header 布局 上边距；
      *

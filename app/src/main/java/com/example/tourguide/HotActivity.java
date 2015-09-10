@@ -1,8 +1,10 @@
 package com.example.tourguide;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
@@ -68,13 +71,23 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
         if (adapter==null){
             listView=(ReFlashListView)hotlayout.findViewById(R.id.listView);
             listView.setInterface(this);
-            adapter=new MyAdapter(hotlayout.getContext(),apk_list,null);
+            adapter=new MyAdapter(hotlayout.getContext(),apk_list);
 
             listView.setAdapter(adapter);
         }else {
             adapter.onDateChange(apk_list);
         }
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                intent.putExtra("ID",Integer.toString(position));
+                intent.setClass(getActivity(), SiteIntroActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
     private void setData(){
         apk_list=new ArrayList<ApkEntity>();
         for (int i=0;i<3;i++){
@@ -104,8 +117,7 @@ public class HotActivity extends Fragment implements ReFlashListView.IReflashLis
                 //通知listview 刷新数据完毕；
                 listView.reflashComplete();
             }
-        },2000);
+        }, 2000);
     }
-
 
 }

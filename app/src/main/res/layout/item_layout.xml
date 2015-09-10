@@ -16,19 +16,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
              />
-
         <TextView
             android:id="@+id/item3_apkname"
             android:layout_width="fill_parent"
             android:layout_height="30dip"
-            android:layout_marginLeft="5dip"
-            android:layout_marginRight="5dip"
+            android:layout_marginTop="170dp"
             android:gravity="center_vertical"
             android:text="应用程序描述"
             android:textSize="14dip"
             android:visibility="visible"/>
-
     </RelativeLayout>
-
-
 </RelativeLayout>
